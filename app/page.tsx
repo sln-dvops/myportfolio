@@ -157,7 +157,7 @@ export default function PortfolioPage() {
               </Link>
 
               <Link
-                href="https://github.com/yourusername"
+                href="https://github.com/sln-dvops"
                 target="_blank"
                 className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white/80 dark:bg-slate-900/60 px-6 py-3.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-700 dark:text-blue-300"
               >
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
               </Link>
 
               <Link
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/shun-lei-naing-355288282/"
                 target="_blank"
                 className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white/80 dark:bg-slate-900/60 px-6 py-3.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-700 dark:text-blue-300"
               >
@@ -270,7 +270,7 @@ export default function PortfolioPage() {
       </div>
 
       <p className="mt-5 text-sm text-blue-600 dark:text-blue-400 font-medium text-center lg:text-left">
-        Software Engineer • ML Enthusiast
+        Software Engineer
       </p>
     </div>
 
@@ -301,6 +301,28 @@ export default function PortfolioPage() {
 
 
       </div>
+      <div className="mt-8 flex flex-wrap gap-4">
+  
+  {/* VIEW RESUME */}
+  <a
+    href="/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/30"
+  >
+    View Resume
+  </a>
+
+  {/* DOWNLOAD RESUME */}
+  <a
+    href="/resume.pdf"
+    download
+    className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-800 px-5 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-blue-200 hover:text-blue-700 dark:hover:bg-slate-700"
+  >
+    Download
+  </a>
+
+</div>
     </div>
   </div>
 
@@ -457,15 +479,15 @@ export default function PortfolioPage() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                 <Link
-                  href="mailto:youremail@example.com"
+                  href="mailto:shunleinaing0@gmail.com"
                   className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
                 >
                   <Mail className="h-4 w-4" />
-                  youremail@example.com
+                  shunleinaing0@gmail.com
                 </Link>
 
                 <Link
-                  href="https://github.com/yourusername"
+                  href="https://github.com/sln-dvops"
                   target="_blank"
                   className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
                 >
@@ -474,7 +496,7 @@ export default function PortfolioPage() {
                 </Link>
 
                 <Link
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/shun-lei-naing-355288282/"
                   target="_blank"
                   className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
                 >
@@ -486,7 +508,6 @@ export default function PortfolioPage() {
                   href="#home"
                   className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
                 >
-                  <Globe className="h-4 w-4" />
                   Back to Top
                 </Link>
               </div>
