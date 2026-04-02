@@ -27,6 +27,7 @@ import {
   SiPostman,
   SiSupabase,
   SiApachespark,
+  SiNetlify,
 } from "react-icons/si";
 
 const skills = {
@@ -42,11 +43,13 @@ const skills = {
     "GitHub",
     "AWS",
     "Vercel",
+    "Netlify",
     "Jupyter",
     "Figma",
     "Postman",
     "Photoshop",
     "Adobe XD",
+    
   ],
 };
 
@@ -68,11 +71,6 @@ export default function SkillsSection() {
       <h2 className="mt-5 text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
         Tools and technologies
       </h2>
-
-      <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300">
-        Technologies I use across full-stack development, product building,
-        and workflow automation.
-      </p>
     </div>
 
     {/* GRID */}
@@ -215,6 +213,10 @@ function getIcon(skill: string): {
       icon: <SiPostman />,
       hoverClass: "group-hover:text-orange-500",
     },    
+    Netlify: {
+      icon: <SiNetlify />,
+      hoverClass: "group-hover:text-green-500",
+    },  
   };
 
   return (
