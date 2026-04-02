@@ -99,7 +99,7 @@ export default function PortfolioPage() {
             <Link href="#about" className="transition hover:text-blue-600">
               About
             </Link>
-            <Link href="/app/skills.tsx" className="transition hover:text-blue-600">
+            <Link href="#projects" className="transition hover:text-blue-600">
               Projects
             </Link>
             <Link href="#skills" className="transition hover:text-blue-600">
@@ -213,9 +213,12 @@ export default function PortfolioPage() {
 
                 <div className="mt-6 space-y-4">
                   {projects.map((project, index) => (
-                    <div
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       key={project.title}
-                      className="group rounded-3xl border border-white/10 bg-white/5 p-4 transition hover:border-blue-300/30 hover:bg-white/10"
+                      className="group block rounded-3xl border border-white/10 bg-white/5 p-4 transition hover:border-blue-300/30 hover:bg-white/10"
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div>
@@ -232,7 +235,7 @@ export default function PortfolioPage() {
                           <ChevronRight className="h-5 w-5 text-blue-200" />
                         </div>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
 
@@ -249,109 +252,117 @@ export default function PortfolioPage() {
       </section>
 
       <section
-  id="about"
-  className="mx-auto max-w-6xl px-6 py-20 sm:px-8 lg:px-10"
->
-  <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] items-center">
-    
-    {/* LEFT: PROFILE */}
-    <div className="flex flex-col items-center lg:items-start">
-      <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
-        
-        {/* glow */}
-        <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-indigo-500/30 blur-2xl" />
+        id="about"
+        className="mx-auto max-w-6xl px-6 py-20 sm:px-8 lg:px-10"
+      >
+        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] items-center">
+          {/* LEFT: PROFILE */}
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+              {/* glow */}
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-indigo-500/30 blur-2xl" />
 
-        {/* image */}
-        <img
-          src="/profile.jpg"
-          alt="Shun Lei Naing"
-          className="relative rounded-3xl object-cover w-full h-full border border-white/10 shadow-xl"
-        />
-      </div>
+              {/* image */}
+              <img
+                src="/profile.jpg"
+                alt="Shun Lei Naing"
+                className="relative rounded-3xl object-cover w-full h-full border border-white/10 shadow-xl"
+              />
+            </div>
+          </div>
 
-      <p className="mt-5 text-sm text-blue-600 dark:text-blue-400 font-medium text-center lg:text-left">
-        Software Engineer
-      </p>
-    </div>
+          {/* RIGHT: TEXT */}
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 dark:bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-700 dark:text-blue-300">
+              <GraduationCap className="h-4 w-4" />
+              About
+            </div>
 
-    {/* RIGHT: TEXT */}
-    <div>
-      <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 dark:bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-700 dark:text-blue-300">
-        <GraduationCap className="h-4 w-4" />
-        About
-      </div>
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+              A bit about me
+            </h2>
 
-      <h2 className="mt-5 text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-        A bit about me
-      </h2>
+            <div className="mt-6 rounded-[1rem] border border-white/80 dark:border-white/10 bg-white/80 dark:bg-slate-900/70 p-8 shadow-lg shadow-blue-100/40 dark:shadow-blue-500/10 backdrop-blur-xl">
+              <p className="leading-8 text-slate-600 dark:text-slate-300">
+                Hi, I’m Shun Lei Naing, a fresh graduate from Temasek
+                Polytechnic with experience in real world projects. I love
+                building systems that solve practical problems. I enjoy creating
+                full-stack applications with clear user flows, reliable
+                integrations, and scalable foundations.
+              </p>
 
-      <div className="mt-6 rounded-[1rem] border border-white/80 dark:border-white/10 bg-white/80 dark:bg-slate-900/70 p-8 shadow-lg shadow-blue-100/40 dark:shadow-blue-500/10 backdrop-blur-xl">
-        
-        <p className="leading-8 text-slate-600 dark:text-slate-300">
-          Hi, I’m Shun Lei Naing, a fresh graduate from Temasek Polytechnic with experience in real world projects. I love building systems that solve practical problems. I enjoy creating full-stack applications with clear user flows, reliable integrations, and scalable foundations.
-        </p>
+              <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
+                My recent work has focused on logistics workflows,
+                customer-facing tracking experiences, and business websites. I’m
+                also exploring broader software engineering problem-solving
+                through projects and hands-on development.
+              </p>
 
-        <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
-          My recent work has focused on logistics workflows, customer-facing tracking experiences, and business websites. I’m also exploring broader software engineering problem-solving through projects and hands-on development.
-        </p>
+              <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
+                I also had the opportunity to represent my company during my
+                internship at an IMDA event.
+              </p>
 
-        <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
-          I also had the opportunity to represent my team at an IMDA event, where we showcased our project at a public booth.
-        </p>
+              <p className="mt-4 text-sm text-blue-600 dark:text-blue-400">
+                Internship Portfolio:{" "}
+                <a
+                  href="https://sites.google.com/view/shunleinaing/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-blue-800 dark:hover:text-blue-300"
+                >
+                  View here
+                </a>
+              </p>
+            </div>
 
+            <div className="mt-8 flex flex-wrap gap-4">
+              {/* VIEW RESUME */}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/30"
+              >
+                View Resume
+              </a>
 
-      </div>
-      <div className="mt-8 flex flex-wrap gap-4">
-  
-  {/* VIEW RESUME */}
-  <a
-    href="/resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/30"
-  >
-    View Resume
-  </a>
-
-  {/* DOWNLOAD RESUME */}
-  <a
-    href="/resume.pdf"
-    download
-    className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-800 px-5 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-blue-200 hover:text-blue-700 dark:hover:bg-slate-700"
-  >
-    Download
-  </a>
-
-</div>
-    </div>
-  </div>
-
-  {/* IMDA GALLERY */}
-  <div className="mt-16">
-    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-5">
-      IMDA Event Showcase
-    </h3>
-
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      
-      {["/imda1.jpg", "/imda2.jpg", "/imda3.jpg"].map((src) => (
-        <div
-          key={src}
-          className="relative h-56 rounded-2xl overflow-hidden group border border-white/10"
-        >
-          <img
-            src={src}
-            className="w-full h-full object-cover transition duration-300 group-hover:scale-105 brightness-95 dark:brightness-75"
-          />
-
-          {/* overlay */}
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition" />
+              {/* DOWNLOAD RESUME */}
+              <a
+                href="/resume.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-800 px-5 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-blue-200 hover:text-blue-700 dark:hover:bg-slate-700"
+              >
+                Download
+              </a>
+            </div>
+          </div>
         </div>
-      ))}
-      
-    </div>
-  </div>
-</section>
+
+        {/* IMDA GALLERY */}
+        <div className="mt-16">
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-5">
+            IMDA Event Showcase
+          </h3>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {["/imda1.jpg", "/imda2.jpg", "/imda3.jpg"].map((src) => (
+              <div
+                key={src}
+                className="relative h-56 rounded-2xl overflow-hidden group border border-white/10"
+              >
+                <img
+                  src={src}
+                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105 brightness-95 dark:brightness-75"
+                />
+
+                {/* overlay */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section
         id="projects"
@@ -376,7 +387,7 @@ export default function PortfolioPage() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group rounded-[2rem] border border-white/80 dark:border-white/10 bg-white/75 dark:bg-slate-900/70 p-7 shadow-lg shadow-blue-100/40 dark:shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-300/40 dark:hover:border-blue-400/30"
+              className="group rounded-[2rem] border border-white/80 dark:border-white/10 bg-white dark:bg-slate-900/70 p-7 shadow-lg shadow-blue-500/40 dark:shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-300/40 dark:hover:border-blue-400/30"
             >
               <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
                 {/* LEFT: TEXT */}
