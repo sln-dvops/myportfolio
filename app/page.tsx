@@ -143,8 +143,7 @@ export default function PortfolioPage() {
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
               I enjoy creating digital products that feel polished, useful, and
-              intuitive — from logistics platforms and tracking experiences to
-              business websites and API-driven systems.
+              intuitive.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
